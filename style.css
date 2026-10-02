@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+/* リセットCSS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 共通設定 */
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+body {
+  background-color: #d5d7d4;
+  font-family: "Hiragino Mincho ProN", serif;
+  font-optical-sizing: auto;
+  color: #171e2f;
+}
+
+h2 {
+  color: #596d6e;
+  text-align: center;
+  padding: 15px;
+  font-size: 30px
+}
+
+h3 {
+  color: #596d6e;
+  text-align: center;
+  margin-top: 500px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  border-top: 0.5px solid #596d6e;
+  padding: 35px;
+  background: #d5d7d4;
+}
+
+
+.word p img {
+  display: inline-block;
+  cursor: pointer;
+  /* カーソルをポインタに変更 */
+  transition: 0.3s;
+  /* なめらかな変化 */
+  margin-top: 40px;
+  text-align: center;
+
+}
+
+/* 基本のアニメーション */
+.word img {
+  max-width: 100%;
+  /* 親幅を超えない（スマホ対応） */
+  height: auto;
+  /* アスペクト比維持 */
+  transition: transform 0.25s ease;
+  display: inline-block;
+
+  /* マウスオーバー時に透明度を変更 */
+}
+
+/* ホバーで沈む効果 */
+.word img:hover {
+  transform: translateY(5px);
+}
+
+
+.word p {
+  text-align: center;
+  font-size: 20px;
+  color: #171e2f;
+  line-height: 2;
+  margin-bottom: 20px;
+  /* フォントサイズの1.5倍 */
+}
+
+.pic p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+h4
+{
+  color: #596d6e;
+  text-align: center;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  background: #d5d7d4;
+}
+
+h5
+{
+  color: #171e2f;
+  text-align: center;
+  margin-top: 40px;
+   font-size: 17px;
+  background: #d5d7d4;
+  padding: 10px;
+}
+
+
+p {
+  font-size: 20px;
+  color: #171e2f;
+  line-height: 2.2;
+}
+
+/**************ここからトップページの設定**************/
+
+/* headerの設定 */
+
+header {
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 15px;
+  background-color: #fff;
+}
+
+header img {
+  width: 100px;
+}
+
+header nav {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
+header nav ul {
+  display: flex;
+  vertical-align: bottom;
+  /* flexの水平方向の位置設定 */
+  justify-content: center;
+  /* flexの垂直方向の位置設定 */
+
+}
+
+header nav ul li {
+  display: block;
+  background-color: #fff;
+  width: 100px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+header nav ul li a:hover {
+  font-size: 110%;
+  color: #66adff;
+}
+
+
+
+/* スライダーの高さ設定 */
+.slider {
+  width: 80%;
+  height: 600px;
+  margin-inline: auto;
+}
+
+.slider img {
+  width: 100%;
+  height: 600px;
+}
+
+
+
+
+/* main設定 */
+
+.mainWrap {
+  width: 1366px;
+  margin-inline: auto;
+}
+
+
+
+/* topword設定 */
+.img-button {
+  position: relative;
+  /*重要*/
+  width: 100%;
+  height: 600px;
+  background-image: url("image/asetto/touka/1x/1x/season_muji-8.png");
+  background-size: cover;
+  /*背景画像を要素サイズに*/
+  margin-top: 50px;
+  margin-inline: auto;
+}
+
+/*** ボタンを中央に ***/
+.img-button a {
+  position: absolute;
+  /*絶対配置*/
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  /*余白なし*/
+  transform: translate(-50%, -50%);
+  /*ずれ修正*/
+  /*ボタン用装飾*/
+  text-decoration: none;
+  font-size: 300%;
+  color: #d5d7d4;
+  transition: .3s;
+  text-shadow: 0 3px 0 #171e2f;
+}
+
+/*ホバー時のボタン*/
+.img-button a:hover {
+  font-size: 300%;
+  color: #66adff;
+}
+
+/*体質診断設定*/
+.img-button2 {
+  position: relative;
+  /*重要*/
+  width: 100%;
+  height: 600px;
+  background-image: url("image/asetto/touka/1x/taishitushindan_img-8.png");
+  background-size: cover;
+  /*背景画像を要素サイズに*/
+  margin-inline: auto;
+}
+
+
+/*** ボタンを中央に ***/
+.img-button2 a {
+  position: absolute;
+  /*絶対配置*/
+  top: 40%;
+  left: 70%;
+  margin: 0;
+  /*余白なし*/
+  transform: translate(-50%, -50%);
+  /*ずれ修正*/
+  /*ボタン用装飾*/
+  text-decoration: none;
+  font-size: 200%;
+  color: #d5d7d4;
+  transition: .3s;
+  text-shadow: 0 3px 0 #171e2f;
+}
+
+/*ホバー時のボタン*/
+.img-button2 a:hover {
+  font-size: 200%;
+  color: #66adff;
+}
+
+.shindanword {
+  padding: 360px;
+}
+
+
+/* onayamiの設定 */
+
+.btn {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: block;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background-color: #d5d7d4;
+}
+
+.btn:hover img:nth-of-type(2) {
+  -webkit-transform: translate(-50%, -50%) scale(.8) !important;
+  transform: translate(-50%, -50%) scale(.8) !important;
+  opacity: 0;
+}
+
+
+.onayami {
+  margin: top 20px;
+  display: flex;
+  justify-content: space-around;
+  /* 縦方向の揃え方 */
+}
+
+
+
+/* 商品設定 */
+.product {
+  display: flex;
+  justify-content: center;
+  /* 縦方向の揃え方 */
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.proword1 {
+  margin-top: 10px;
+
+}
+
+.cw-card-ov {
+  position: relative;
+  display: block;
+  max-width: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+
+
+
+/* 基本のアニメーション */
+.proword1 img {
+  max-width: 100%;
+  /* 親幅を超えない（スマホ対応） */
+  height: auto;
+  /* アスペクト比維持 */
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+/* ホバーで沈む効果 */
+.proword1 img:hover {
+  transform: translateY(5px);
+}
+
+
+.cw-card-ov {
+  position: relative;
+  display: block;
+  max-width: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+ 
+.cw-card-ov img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+ 
+.cw-card-ov__cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+ 
+.cw-card-ov:hover .cw-card-ov__cover {
+  opacity: 1;
+}
+
+
+
+/* 読み物設定 */
+
+.read {
+  display: flex;
+  justify-content: center;
+  /* 縦方向の揃え方 */
+}
+
+/* about設定*/
+.adoutus
+{
+  line-height: 1.8; /* フォントサイズの1.8倍の行間にする */
+}
+
+
+/*　cafeの設定*/
+
+
+/* inasta*/
+
+
+
+/* footerの設定 */
+footer {
+  background-color: #596d6e;
+  padding: 50px 0;
+  margin-top: 100px;
+}
+
+footer p {
+  text-align: center;
+  color: #fff;
+}
